@@ -2,11 +2,13 @@ class Product {
     name;
     price;
     number;
+    img
 
-    constructor(name, price, number) {
+    constructor(name, price, number, img) {
         this.name = name;
         this.price = price;
         this.number = number;
+        this.img = img;
     }
 
 

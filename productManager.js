@@ -18,6 +18,7 @@ function showAllProducts() {
             "        <td>"+ products[i].name +"</td>" +
             "        <td>"+ products[i].price +"</td>" +
             "        <td>"+ products[i].number +"</td>" +
+            "        <td><img src='"+products[i].img+"'></td>" +
             "        <td><button>Edit</button></td>" +
             "        <td><button onclick='deleteByIndex("+i+")'>Delete</button></td>" +
             "    </tr>"
@@ -29,7 +30,11 @@ function showAllProducts() {
 showAllProducts();
 function createNewProduct() {
     //b1: lay du lieu trong the input
-    let newP = document.getElementById("newProduct").value;
+    let name = document.getElementById("productName").value;
+    let price = document.getElementById("price").value;
+    let number = document.getElementById("number").value;
+    let img = document.getElementById("img").value;
+    let newP = new Product(name, price, number, img);
     //b2: them moi vao mang
     products.push(newP);
     //b3: Ve lai bang
